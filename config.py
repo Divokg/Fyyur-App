@@ -10,4 +10,9 @@ DEBUG = True
 
 
 # TODO IMPLEMENT DATABASE URL
-SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:kbu252slandcruiser@localhost:5432/fyyur1'
+DB_HOST = os.getenv('DB_HOST','127.0.0.1:5432')
+DB_USER = os.getenv('DB_USER','postgres')
+DB_PASSWORD = os.getenv('DB_PASSWORD','kbu252slandcruiser')
+DB_NAME = os.getenv('DB_NAME','fyyur1')
+
+DB_PATH = 'postgresql+psycopg2://{}:{}@{}/{}'.format(DB_USER, DB_PASSWORD, DB_HOST, DB_NAME)
