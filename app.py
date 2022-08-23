@@ -36,7 +36,7 @@ from models import db, Venue, Artist, Show
 db.init_app(app)
 migrate = Migrate(app, db)
 migrate.init_app(app)
-
+                      
 # TODO: connect to a local postgresql database
 
 #----------------------------------------------------------------------------#
